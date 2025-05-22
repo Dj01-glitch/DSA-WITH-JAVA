@@ -1,0 +1,30 @@
+import java.util.*;
+class java {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the rows of the array: ");//accepting array elements
+        int r = sc.nextInt();
+        System.out.print("Enter columns of an array: ");
+        int c = sc.nextInt();
+        int[][] arr = new int[r][c];
+        int[][] transpose = new int[c][r];
+        for (int i = 0; i < r; i++) {
+            for(int j=0;j<c;j++)
+            {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        for (int i = 0; i < c; i++) {
+            for(int j=0;j<r;j++)
+            {
+                transpose[i][j] = arr[j][i];
+            }
+        }
+        for (int i = 0; i < c; i++) {
+            for (int j = 0; j < r; j++) {
+                System.out.print(transpose[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
