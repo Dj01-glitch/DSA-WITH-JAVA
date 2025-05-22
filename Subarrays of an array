@@ -1,0 +1,29 @@
+import java.util.*;
+class java {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the length of the array: ");//accepting array elements
+        int r = sc.nextInt();
+        int[] arr = new int[r];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            subarray(i,arr);
+        }
+
+
+    }
+    public static void subarray(int a,int []num)
+    {
+        for(int i=a;i<num.length;i++)
+        {
+            for(int j=a;j<=i;j++)
+            {
+                System.out.print(num[j]+" ");
+            }
+            System.out.println(" ");
+        }
+    }
+}
